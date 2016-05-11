@@ -1,4 +1,4 @@
-package com.codenvy.example.java;
+package xyz.cloorc.example.test.springboot;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
