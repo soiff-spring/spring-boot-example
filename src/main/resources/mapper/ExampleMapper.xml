@@ -8,4 +8,10 @@
 	<select id="selectAll" resultType="Example">
 		SELECT * FROM <include id="table"/>
 	</select>
+	<select id="selectOne" resultType="Example">
+		SELECT * FROM <include id="table"/> WHERE id = #{id}
+	</select>
+	<insert id="insertOne" parameterType="Example">
+		INSERT INTO <include id="table"/> VALUES(#{id},#{name},#{age})
+	</insert>
 </mapper>
