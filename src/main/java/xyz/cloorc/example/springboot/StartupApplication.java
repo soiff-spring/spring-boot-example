@@ -31,10 +31,7 @@ public class StartupApplication implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Hello World!");
-        Example e = new Example();
-        e.setId(1l);
-        e.setName("foo");
-        e.setAge(1);
+        Example e = new Example(1l,"foo", 1);
         final boolean result = example.insert(e);
         System.out.println(result);
         List<Example> examples = example.select();
