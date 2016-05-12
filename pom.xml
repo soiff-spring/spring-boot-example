@@ -69,9 +69,8 @@
         	<artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-        	<groupId>com.mchange</groupId>
-        	<artifactId>c3p0</artifactId>
-        	<version>0.9.5.1</version>
+        	<groupId>commons-dbcp</groupId>
+        	<artifactId>commons-dbcp</artifactId>
         </dependency>
     </dependencies>
     

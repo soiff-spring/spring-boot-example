@@ -15,11 +15,11 @@
     </appender>
     <appender name="db" class="ch.qos.logback.classic.db.DBAppender">
     	<connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
-    		<dataSource class="com.mchange.v2.c3p0.ComboPooledDataSource">
-				<driverClass>com.mysql.jdbc.Driver</driverClass>
-				<jdbcUrl>jdbc:mysql://${database}:3306/logback?useSSL=false;</jdbcUrl>
-				<user>${username}</user>
-				<password>${password}</password>
+    		<dataSource class="org.apache.commons.dbcp.BasicDataSource">
+				<driverClassName>com.mysql.jdbc.Driver</driverClassName>
+				<url>jdbc:mysql://${database}:3306/logback?useSSL=false</url>
+				<username>${username}</username>
+				<password>123456</password>
     		</dataSource>
 	    </connectionSource>
     </appender>
