@@ -1,5 +1,7 @@
 package xyz.cloorc.example.springboot.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,10 +16,16 @@ public class ServiceExample {
 	
 	@Transactional
 	public boolean insert (Example e) {
-		return example.create(e);
+		return example.insertOne(e) > 0;
 	}
 	
+	@Transactional
 	public Example select (Long id) {
-		return example.select(id);
+		return example.selectOne(id);
+	}
+	
+	@Transactional
+	public List<Example> select () {
+		return example.selectAll();
 	}
 }

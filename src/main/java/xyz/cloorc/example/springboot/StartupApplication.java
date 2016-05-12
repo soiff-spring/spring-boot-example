@@ -1,5 +1,9 @@
 package xyz.cloorc.example.springboot;
 
+import java.util.List;
+
+import javax.sql.DataSource;
+
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +37,17 @@ public class StartupApplication implements CommandLineRunner{
         e.setAge(1);
         final boolean result = example.insert(e);
         System.out.println(result);
-        e = example.select(1l);
-        System.out.println(e.toString());
+        List<Example> examples = example.select();
+        System.out.println(examples.get(0));
+        System.out.println(example.select(1l));
     }
     
+    @Autowired
     @Bean
     @ConditionalOnMissingBean
-    public final SqlSessionFactory getSqlSessionFactory() throws Exception {
+    public static SqlSessionFactory getSqlSessionFactory(DataSource source) throws Exception {
     	final SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+    	bean.setDataSource(source);
     	bean.setConfigLocation(new ClassPathResource("mybatis-config.xml"));
     	return bean.getObject();
     }

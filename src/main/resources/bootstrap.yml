@@ -1,4 +1,4 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:spring-boot-exampl;MODE=MYSQL;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:h2sql/init.sql'
+    url: jdbc:h2:mem:springbootexampl;MODE=MYSQL;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:h2sql/init.sql'
     driver-class-name: org.h2.Driver

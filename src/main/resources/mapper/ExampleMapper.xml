@@ -6,12 +6,12 @@
 	<sql id="table">example</sql>
 
 	<select id="selectAll" resultType="Example">
-		SELECT * FROM <include id="table"/>
+		SELECT * FROM <include refid="table"/>
 	</select>
-	<select id="selectOne" resultType="Example">
-		SELECT * FROM <include id="table"/> WHERE id = #{id}
+	<select id="selectOne" parameterType="long" resultType="Example">
+		SELECT * FROM <include refid="table"/> WHERE id = #{id}
 	</select>
 	<insert id="insertOne" parameterType="Example">
-		INSERT INTO <include id="table"/> VALUES(#{id},#{name},#{age})
+		INSERT INTO <include refid="table"/> VALUES(#{id},#{name},#{age})
 	</insert>
 </mapper>
