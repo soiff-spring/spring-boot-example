@@ -4,6 +4,6 @@ spring:
     driver-class-name: org.h2.Driver
 logback:
   username: logback
-  password: '{cipher}AQAutWwTDJcOuYZB74KKHNHgCdZOocTaW7C3deqLLs21h0xDYSLpyWiC1hE1sL0VVN81Iv/UaFo8oLot3vOqWD8mt/FLSp+mf1kLMu54Nz62vd4GyB1VMZQK2xCaLa8GCX5UNoCjbYe0yDgYKxr2p92GF3e1Hr4gpEYTg/SEXPegtgIEgwYaVB6DT6eQjHcCCnhiWpnJgP5W92p11y7LwisHj/kLlVx4XEO5UVUhpiXkKUvJRWk/EcU0S2uvIzadeUk5n+XYzCj/Yfu90w7IhSRBTdxU8Gu1jaYHEvHXCzTte6BsLmtVWdBnrPAgORYgDyRIaaKBoF3+EC+tBLs4DTxTIa8OgfkoQdkcUHhYAJ6wrqhUTKH5WbQvogkvocxTk7w='
+  password: '{cipher}Encrypted Text Value from secret and Public Key'
 encrypt:
-  key: 
+  key: 'Private Key In PEM Encoding'
