@@ -16,7 +16,7 @@ public class DaoExample extends AbstractDao<Example> {
 	}
 	
 	public Example selectOne (Long id) {
-		return super.select(id);
+		return super.select(id, new ResultHandlerExample());
 	}
 	
 	public int insertOne (Example e) {

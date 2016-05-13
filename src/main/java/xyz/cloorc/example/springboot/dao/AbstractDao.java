@@ -30,6 +30,12 @@ public abstract class AbstractDao<T> extends SqlSessionDaoSupport {
 	public T select (Object id) {
 		return super.getSqlSession().selectOne(route(), id);
 	}
+	
+	public T select (Object id, AbstractResultHandler<T> handler) {
+	    super.getSqlSession().select(route(), id, handler);
+	    return handler.getObject();
+	}
+	
 	public int insert (T object) {
 		return super.getSqlSession().insert(route(), object);
 	}

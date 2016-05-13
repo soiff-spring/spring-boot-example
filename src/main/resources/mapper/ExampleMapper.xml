@@ -9,7 +9,7 @@
 		SELECT * FROM <include refid="table"/>
 	</select>
 	<select id="selectOne" parameterType="long" resultType="Example">
-		SELECT * FROM <include refid="table"/> WHERE id = #{id}
+		SELECT id,name as fullname,age FROM <include refid="table"/> WHERE id = #{id}
 	</select>
 	<insert id="insertOne" parameterType="Example">
 		INSERT INTO <include refid="table"/> VALUES(#{id},#{name},#{age})
