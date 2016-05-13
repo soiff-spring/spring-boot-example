@@ -68,9 +68,15 @@
         	<groupId>mysql</groupId>
         	<artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!-- DataSource implementation -->
         <dependency>
         	<groupId>commons-dbcp</groupId>
         	<artifactId>commons-dbcp</artifactId>
+        </dependency>
+        <!-- If condiction evaluation in logback-spring.xml -->
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
         </dependency>
     </dependencies>
     

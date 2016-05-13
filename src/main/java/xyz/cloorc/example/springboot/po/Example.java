@@ -9,6 +9,8 @@ public class Example {
 	private String name;
 	private Integer age;
 	
+	public Example(){}
+	
 	public Example(Long id, String name, Integer age) {
 	    this.id = id;
 	    this.name = name;

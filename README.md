@@ -26,6 +26,8 @@ App output is streamed into a console. Note that if your app expects user input,
 
 1. [JCE](http://cloud.spring.io/spring-cloud-static/spring-cloud.html#_encryption_and_decryption);
 
+> [Jce8 Download](http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip)
+
 ### Usage
 
 1. Generate encrypted text value for secret;
