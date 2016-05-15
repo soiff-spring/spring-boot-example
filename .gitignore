@@ -1,5 +1,6 @@
-target/*
-/target/
+target/
 .classpath
 .settings/
 .project
+.idea/
+spring-boot-example.iml
