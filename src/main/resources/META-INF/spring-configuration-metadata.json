@@ -1,32 +1,8 @@
 {
-  "groups": [
-    {
-      "name": "example.simple",
-      "type": "xyz.cloorc.example.springboot.autoconfigure.SimpleProperties",
-      "sourceType": "xyz.cloorc.example.springboot.autoconfigure.SimpleProperties"
-    },
-    {
-      "name": "logback"
-    }
-  ],
-  "properties": [
-    {
-      "name": "example.simple.location",
-      "type": "java.lang.String",
-      "sourceType": "xyz.cloorc.example.springboot.autoconfigure.SimpleProperties"
-    },
-    {
-      "name": "logback.database",
-      "type": "java.lang.String"
-    },
-    {
-      "name": "logback.username",
-      "type": "java.lang.String"
-    },
-    {
-      "name": "logback.password",
-      "type": "java.lang.String"
-    }
-  ],
+  "properties": [{
+    "name": "example.simple.enabled",
+    "type": "java.lang.Boolean",
+    "sourceType": "java.lang.Boolean"
+  }],
   "hints": []
 }

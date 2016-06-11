@@ -36,6 +36,7 @@ public class StartupApplication implements CommandLineRunner{
     public void run(String... args) throws Exception {
         System.out.println("Hello World!");
         Example e = new Example(Long.valueOf(1),"foo", 1);
+        System.out.println(example.simple());
         final boolean result = example.insert(e);
         System.out.println(result);
         List<Example> examples = example.select();

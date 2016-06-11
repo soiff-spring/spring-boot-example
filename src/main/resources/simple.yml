@@ -1,0 +1,3 @@
+example:
+  simple:
+    location: '/path/to/somewhere'

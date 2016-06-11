@@ -4,6 +4,9 @@ spring:
     driver-class-name: org.h2.Driver
 logback:
   username: logback
-  password: '{cipher}7b1b646917803709aaadd3677e5c771b69997d8e21cbfec47d7c0c184303d485'
+  password: '{cipher}180aa1301933e935f8189d333b2b30427eb7a5c3dc48853edcdd0ec13b489a58'
 encrypt:
   key: 'changeit'
+example:
+  simple:
+    enabled: false
