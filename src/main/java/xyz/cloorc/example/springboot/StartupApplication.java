@@ -1,6 +1,7 @@
 package xyz.cloorc.example.springboot;
 
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 import javax.sql.DataSource;
 
@@ -25,8 +26,18 @@ import xyz.cloorc.example.springboot.service.ServiceExample;
 @SpringBootApplication
 @EnableAutoConfiguration
 public class StartupApplication implements CommandLineRunner{
-    public static void main(String[] args) {
-        SpringApplication.run(StartupApplication.class, args);
+    public static void main(String[] args) throws InterruptedException {
+        SpringApplication.run(StartupApplication.class, args).registerShutdownHook();
+        final CountDownLatch latch = new CountDownLatch(1);
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                log.info("Application is going to exit.");
+                latch.countDown();
+            }
+        }));
+        log.info("Application is waiting to be terminated.");
+        latch.await();
     }
 
     @Autowired
@@ -53,5 +64,15 @@ public class StartupApplication implements CommandLineRunner{
     	bean.setDataSource(source);
     	bean.setConfigLocation(new ClassPathResource("mybatis-config.xml"));
     	return bean.getObject();
+    }
+
+    @Bean
+    public CommandLineRunner getCommandLineRunner() {
+        return new CommandLineRunner() {
+            @Override
+            public void run(String... args) throws Exception {
+                log.info("New command line runner has been triggered.");
+            }
+        };
     }
 }
