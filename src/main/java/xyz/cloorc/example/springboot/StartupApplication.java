@@ -19,12 +19,14 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
 
+import org.springframework.scheduling.annotation.EnableScheduling;
 import xyz.cloorc.example.springboot.po.Example;
 import xyz.cloorc.example.springboot.service.ServiceExample;
 
 @Slf4j
 @SpringBootApplication
 @EnableAutoConfiguration
+@EnableScheduling
 public class StartupApplication implements CommandLineRunner{
     public static void main(String[] args) throws InterruptedException {
         SpringApplication.run(StartupApplication.class, args).registerShutdownHook();
