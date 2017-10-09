@@ -108,9 +108,6 @@
                         <goals>
                             <goal>repackage</goal>
                         </goals>
-                        <configuration>
-                            <!--mainClass>com.dtdream.vanyar.DistrictApplication</mainClass-->
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
